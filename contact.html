@@ -3,53 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contact</title>
+    <title>Contact Us - Indian Recipe Collection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="contact.css">
 </head>
 <body>
-    <div id="container">
-        <div class="header">
-            <img
-              src="picture/logo.jpeg"
-              alt="logo"
-              id="logo"
-              style="clip-path: circle(50%); height: 150px"
-            /> 
-            <img
-          src="picture/f chef.png"
-          alt="Female chef"
-          id="chef1"
-          style="height: 200px"
-        />                                                                                                                                                           
-            <img src="picture/recip1.jpeg" alt="Image1" id="Image1" />
-            <img src="picture/recip2.jpeg" alt="Image2" id="Image2" />
-            <h1>Indian Recipe Collection</h1>
-            <h2>Traditional Indian Recipes For Everyone</h2>
-            <div class="link">
-                <a href="index.html">HOME</a>
-                <a href="contact.html" id="contact">CONTACT</a>
-                <a href="about.html" id="about">ABOUT</a></div>
-              
-          </div>
-          
+    <div class="container">
+        <nav class="navbar">
+            <img src="picture/logo.jpeg" alt="Spice Jar Logo" class="logo">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html" class="active">Contact</a>
+            </div>
+        </nav>
 
-    <div class="box">
-<h1><u><i>contact details</i></u></h1>
-<p><strong>phone no :</strong> 9870654321</p>
-<br>
-<br>
-<br>
-<p><strong>Email id :</strong> indianfood123@gmail.com</p>
-<br>
-<br>
-<br>
-<p><strong>Instagram id :</strong>indian_food123</p> </p>
-<br>
-<br>
-<br>
-<script src="conatct.js"></script>
+        <main class="contact-container">
+            <div class="contact-header">
+                <h1>Get in Touch</h1>
+                <p>Have questions, recipe suggestions, or feedback? We'd love to hear from you!</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <div class="info-card">
+                        <i class="fas fa-phone-alt"></i>
+                        <h3>Phone</h3>
+                        <p>+91 98706 54321</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>contact@indianrecipecollection.com</p>
+                    </div>
+
+                    <div class="info-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Office</h3>
+                        <p> Gurudawara Gita Bhawan, near Gurudwara Road, Geeta Colony, Kalyan Nagar, Sonipat, Haryana 131001</p>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a subject</option>
+                            <option value="feedback">Recipe Feedback</option>
+                            <option value="suggestion">Recipe Suggestion</option>
+                            <option value="collaboration">Collaboration</option>
+                            <option value="general">General Inquiry</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="newsletter"> 
+                            Subscribe to our weekly recipe newsletter
+                        </label>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+
+                <!-- Recipe Submission Section -->
+                <div class="recipe-submission">
+                    <h3>Share Your Recipe</h3>
+                    <form id="recipeForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Recipe Name" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Recipe Details" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="file" accept=".pdf,.doc,.txt" id="recipeFile">
+                            <small>Upload recipe (PDF, DOC, TXT)</small>
+                        </div>
+                        <button type="submit" class="submit-btn">Submit Recipe</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Google Map -->
+            <div class="map-section">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3489.7832054616083!2d77.01781337497027!3d28.993794567584757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390db072b63f91f5%3A0x80abdcc23c540988!2sGVM%20College%20Of%20Education%20For%20Women!5e0!3m2!1sen!2sin!4v1740668133082!5m2!1sen!2sin" 
+                 style="border:0;" 
+                 allowfullscreen="" 
+                 loading="lazy">
+                </iframe>
+
+            </div>
+        </main>
     </div>
-</div>
 
+    <script src="contact.js"></script>
 </body>
 </html>
